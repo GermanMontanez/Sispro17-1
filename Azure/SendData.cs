@@ -13,9 +13,11 @@ namespace SimulatedDevice
     class Program
     {
         static DeviceClient deviceClient;
-        static string iotHubUri = "MarkApp.azure-devices.net";
-        static string deviceKey = "eakY4ck3pWtSRCjdevbX/MfFtyPkI4SdgZjqGOmzwqY=";
+        static string iotHubUri = "MarkApp.azure-devices.net"; //Change this value for your own IoTHUB URL.
+        static string deviceKey = "eakY4ck3pWtSRCjdevbX/MfFtyPkI4SdgZjqGOmzwqY="; //Change this value for your own device key.
         static SerialPort _serialPort;
+		static string deviceID = "myFirstDevice"; //Change this value for your device id
+		
 
 
         static void Main(string[] args)
@@ -25,12 +27,12 @@ namespace SimulatedDevice
             _serialPort = new SerialPort();
 
             // Allow the user to set the appropriate properties.
-            _serialPort.PortName = "COM3";
-            _serialPort.BaudRate = 9600;
+            _serialPort.PortName = "COM3"; //Change this value for your own serial port.
+            _serialPort.BaudRate = 9600; 	//Change this value for your own BaudRate.
             _serialPort.Open();
 
             Console.WriteLine("Simulated device\n");
-            deviceClient = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey("myFirstDevice", deviceKey), TransportType.Mqtt);
+            deviceClient = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey(deviceID, deviceKey), TransportType.Mqtt); 
 
             SendDeviceToCloudMessagesAsync();
             Console.ReadLine();
@@ -59,7 +61,7 @@ namespace SimulatedDevice
 
                 var telemetryDataPoint = new
                 {
-                    deviceId = "myFirstDevice",
+                    deviceId = "deviceID",
                     internalTemp = tempint,
                     externalTemp = tempout,
                     humidity = humy
