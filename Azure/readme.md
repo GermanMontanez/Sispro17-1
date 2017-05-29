@@ -59,7 +59,7 @@ Por ultimo, las líneas que definen cuando se envían los mensajes al IoT hub se
 await deviceClient.SendEventAsync(message);
 Console.WriteLine("{0} > Sending message: {1}", DateTime.Now, messageString);
 Task.Delay(1000).Wait();
-
+```
 El delay es para indicarle cada cuanto se van a enviar, en este caso cada segundo. Se puede modificar y colocar un condicional que envié el mensaje solo cuando se identifique un comportamiento en las variables, por ejemplo si la temperatura externa exedio los 70°  el nuevo código seria:
 ```
 If(tempint>70){
