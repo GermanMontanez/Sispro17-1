@@ -61,7 +61,7 @@ namespace SimulatedDevice
 
                 var telemetryDataPoint = new
                 {
-                    deviceId = "deviceID",
+                    deviceId = deviceID,
                     internalTemp = tempint,
                     externalTemp = tempout,
                     humidity = humy
