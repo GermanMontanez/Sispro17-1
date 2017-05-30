@@ -41,6 +41,10 @@ var buffer = new char[12]; // Cambiar el 12 por el numero identificado
 ```
 
 El programa le solicitara al micro-controlador los datos enviándole una T mayúscula. Posteriormente los datos son guadados en un arreglo llamado buffer para la decodificación.
+```
+_serialPort.Write("T");
+_serialPort.Read(buffer, 0, 12);
+```
 
 Por ultimo modifique la variable JSON según su información. En este caso son 3 variables: Temparatura interna, temperatura externa y húmedad por lo que esta variable queda de la siguiente forma.
 ```
