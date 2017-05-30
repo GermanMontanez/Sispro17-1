@@ -14,7 +14,7 @@ Un breve tutorial para usar el computador como interfaz para mandar mensajes al 
 
 ## Como añadir dispositivos al IoT hub?
 
-Desde el azure portal, en la ventana principal del IoT hub se encontrará un panel en donde se puede encontrar el Device Explorer (1 en la imagen). Al dar clic aparecerá una interface que habilitará el botón Add (2 en la imagen) y desde ahí se podrá añadir un dispositivo. Es importante tener en cuenta el deviceid que después se colocara en el archivo [SendData.cs](SendData.cs) en la variable deviceID.
+Desde el azure portal, en la ventana principal del IoT hub se encontrará un panel en donde se puede encontrar el Device Explorer (1 en la imagen). Al dar clic aparecerá una interface que habilitará el botón Add (2 en la imagen) y desde ahí se podrá añadir un dispositivo. Es importante tener en cuenta el deviceid que después se colocara en el archivo [SendData.cs](SendData.cs) en la variable deviceID.__
 Luego de agregar el dispositivo aparecerá en la lista (3 en la imagen) y al dar click aparecerá toda la información de conexión, en este caso solo necesitaremos el Primary key (4 en la imagen) para modificar en el archivo [SendData.cs](SendData.cs) en la variable deviceKey.
 
 ![alt text](AddDevice.png)
@@ -63,7 +63,7 @@ var telemetryDataPoint = new
 	                    humidity = humy
 	                };
 ```
-A la derecha están los nombres de las variables que se crearon para recibir los datos del microcontrolador, y a la izquierda están los nombres con los que serán recibidos estos valores en el IoT hub (Estos nombres los define el creador del archivo, lo mejor es colocar nombres acordes a las variables)
+A la derecha están los nombres de las variables que se crearon para recibir los datos del microcontrolador, y a la izquierda están los nombres con los que serán recibidos estos valores en el IoT hub (Estos nombres los define el creador del archivo, lo mejor es colocar nombres acordes a las variables).__
 
 Por ultimo, las líneas que definen cuando se envían los mensajes al IoT hub se muestran a continuación:
 ```csharp
@@ -75,7 +75,7 @@ El delay es para indicarle cada cuanto se van a enviar, en este caso cada segund
 ```csharp
 If(tempint>70){
 				await deviceClient.SendEventAsync(message);
-                Console.WriteLine("{0} > Sending message: {1}", DateTime.Now, messageString);
+				Console.WriteLine("{0} > Sending message: {1}", DateTime.Now, messageString);
 				}
 
 Task.Delay(1000).Wait();
