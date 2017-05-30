@@ -10,7 +10,7 @@ Un breve tutorial para usar el computador como interfaz para mandar mensajes al 
 2.	Crear un servicio de IoThub https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-getstarted (En la sección: Create an IoT hub) (No olvidar crear un dispositivo).
 3.	Crear un servicio de stream analitics https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-get-started-with-azure-stream-analytics-to-process-data-from-iot-devices (En la sección: Create a Stream Analytics Job) colocando como entrada el IoT hub  y como salida el power bi.
 4.	Modificar el código [SendData.cs](SendData.cs) según las características de su proyecto.
-5.	Compilar y ejecutar en Visual Studio el código modificado [SendData.cs](SendData.cs) para pruebas.
+5.	Compilar y ejecutar en Visual Studio el código modificado [SendData.cs](SendData.cs) para pruebas (Usar la misma configuracion que se muestra en la seccion: Create a simulated device app en https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-getstarted#create-a-simulated-device-app).
 
 ## Como añadir dispositivos al IoT hub?
 
