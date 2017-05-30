@@ -21,11 +21,11 @@ Luego de agregar el dispositivo aparecerá en la lista (3 en la imagen) y al dar
 
 ## Como modificar [SendData.cs](SendData.cs)?
 
-Cambiar estas lineas en codigo con su informacion del IoT hub creado. (No olvidar crear un dispositivo)
+Cambiar estas lineas en codigo con su informacion del IoT hub creado. (No olvidar crear un dispositivo en el IoThub)
 ```csharp
 static string iotHubUri = "MarkApp.azure-devices.net"; //Change this value for your own IoTHUB URL.
 static string deviceKey = "eakY4ck3pWtSRCjdevbX/MfFtyPkI4SdgZjqGOmzwqY="; //Change this value for your own device key.
-static SerialPort _serialPort;
+static SerialPort _serialPort; //Esta linea no se cambia.
 static string deviceID = "myFirstDevice"; //Change this value for your device id
 ```
 
